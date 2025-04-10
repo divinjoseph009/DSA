@@ -1,0 +1,7 @@
+[i/p] [3,1,4,5,11,8]   =>  o/p [3,1,5,11,4,8]  or other arrangements of odd and even grouped.
+
+l=start, h=end
+
+while l < h:
+    if arr[l]%2 == 0 do l++
+    if arr[h]%2 == 1 do h--
