@@ -4,4 +4,5 @@ l=start, h=end
 
 while l < h:
     if arr[l]%2 == 0 do l++
-    if arr[h]%2 == 1 do h--
+        else if arr[h]%2 == 1 do h--
+            else swap(arr[l], arr[h])
