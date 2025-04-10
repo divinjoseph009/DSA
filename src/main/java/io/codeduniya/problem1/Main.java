@@ -9,18 +9,18 @@ public class Main {
     }
 
     private static void partition(int[] arr) {
-        int i = 0, j = arr.length-1;
-        while(i < j) {
-            do {
-                i++;
-            } while (arr[i] % 2 != 0);
+        int l = 0, h = arr.length-1;
+        while(l <= h) {
+            if(arr[l]%2 == 1) {
+                l++;
+            } else if (arr[h]%2 == 0) {
+                h--;
+            } else {
+                swap(arr, l, h);
+            }
 
-            do {
-                j--;
-            } while (arr[j] % 2 == 0);
-            if (i >= j) return;
-            swap(arr, i, j);
         }
+
     }
 
     private static void swap(int[] arr, int i, int j) {
